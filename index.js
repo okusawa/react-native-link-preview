@@ -63,14 +63,14 @@ const getTitle = function(doc) {
 };
 
 const getDescription = function(doc) {
-  let description = doc('meta[name=description]').attr('content');
+  let description = doc("meta[property='og:description']").attr('content');
 
   if (description === undefined) {
     description = doc('meta[name=Description]').attr('content');
   }
 
   if (description === undefined) {
-    description = doc("meta[property='og:description']").attr('content');
+    Description = doc('meta[name=description]').attr('content');
   }
 
   return description;
